@@ -1,9 +1,9 @@
 app-id: com.github.artemanufrij.regextester
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '19.08'
+runtime-version: '20.08'
 base: io.elementary.BaseApp
-base-version: 'juno-19.08'
+base-version: 'juno-20.08'
 command: com.github.artemanufrij.regextester
 finish-args:
   - --share=ipc
@@ -16,7 +16,9 @@ modules:
       - --buildtype=release
     sources:
       - type: archive
-        url: https://github.com/artemanufrij/regextester/archive/1.1.0.tar.gz
-        sha256: a9785c86357288632079bad7d897af7d2216e8ed2fcf6467f9991fd7adb26d3b
+        url: https://github.com/artemanufrij/regextester/archive/1.1.1.tar.gz
+        sha256: 619e9cb465f98119c17864078d3f308ab5eed4ff1af59f4b45254033cd10a05e
       - type: patch
         path: elementary-theme.patch
+      - type: patch
+        path: 27.patch
