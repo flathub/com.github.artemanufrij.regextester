@@ -7,7 +7,7 @@ base-version: 'juno-22.08'
 command: com.github.artemanufrij.regextester
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
 modules:
   - name: regextester
