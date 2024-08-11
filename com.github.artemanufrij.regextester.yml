@@ -21,4 +21,4 @@ modules:
       - type: patch
         path: elementary-theme.patch
       - type: patch
-        path: 27.patch
+        path: svg-icon.patch
