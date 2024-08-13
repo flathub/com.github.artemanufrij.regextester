@@ -1,0 +1,109 @@
+From 53317c2afed6d45f3b626335643bb1d0702970e6 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Tue, 13 Aug 2024 23:11:33 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+---
+ data/com.github.artemanufrij.regextester.appdata.xml.in | 45 ++++++++-------------------------------------
+ 1 file changed, 8 insertions(+), 37 deletions(-)
+
+diff --git a/data/com.github.artemanufrij.regextester.appdata.xml.in b/data/com.github.artemanufrij.regextester.appdata.xml.in
+index f871840..5d78a09 100644
+--- a/data/com.github.artemanufrij.regextester.appdata.xml.in
++++ b/data/com.github.artemanufrij.regextester.appdata.xml.in
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2017 Artem Anufrij <artem.anufrij@live.de> -->
+-<component type="desktop">
++<component type="desktop-application">
+     <id>com.github.artemanufrij.regextester</id>
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>GPL-3.0+</project_license>
+@@ -19,6 +19,7 @@
+     <url type="bugtracker">https://github.com/artemanufrij/regextester/issues</url>
+     <url type="help">https://github.com/artemanufrij/regextester/issues</url>
+     <url type="donation">https://www.paypal.me/ArtemAnufrij</url>
++    <url type="vcs-browser">https://github.com/artemanufrij/regextester</url>
+     <url type="translate">https://github.com/artemanufrij/regextester</url>
+     <translation type="gettext">com.github.artemanufrij.regextester</translation>
+     <update_contact>artem.anufrij@live.de</update_contact>
+@@ -53,12 +54,12 @@
+         </release>
+         <release version="1.0.2" date="2018-11-01">
+             <description>
+-                Fix for flatpak
++                <p>Fix for flatpak</p>
+             </description>
+         </release>
+         <release version="1.0.1" date="2018-10-24">
+             <description>
+-                Switch to Meson
++                <p>Switch to Meson</p>
+                 <p>Fixed:</p>
+                 <ul>
+                     <li>Restore correct window size</li>
+@@ -71,57 +72,27 @@
+         </release>
+         <release version="0.2.0" date="2018-07-24">
+             <description>
+-                Prepare for JUNO
++                <p>Prepare for JUNO</p>
+             </description>
+         </release>
+         <release version="0.1.7" date="2018-02-20">
+             <description>
+-                Save/restore window size and position
++                <p>Save/restore window size and position</p>
+             </description>
+         </release>
+         <release version="0.1.6" date="2018-02-06">
+             <description>
+-                Small UX changes
++                <p>Small UX changes</p>
+             </description>
+         </release>
+-    </releases>
+-    <releases>
+         <release version="0.1.5" date="2017-11-10">
+             <description>
+                 <p>New:</p>
+                 <ul>
+                     <li>Group support</li>
+                 </ul>
+             </description>
+         </release>
+     </releases>
+-    <content_rating type="oars-1.1">
+-        <content_attribute id="violence-cartoon">none</content_attribute>
+-        <content_attribute id="violence-fantasy">none</content_attribute>
+-        <content_attribute id="violence-realistic">none</content_attribute>
+-        <content_attribute id="violence-bloodshed">none</content_attribute>
+-        <content_attribute id="violence-sexual">none</content_attribute>
+-        <content_attribute id="violence-desecration">none</content_attribute>
+-        <content_attribute id="violence-slavery">none</content_attribute>
+-        <content_attribute id="violence-worship">none</content_attribute>
+-        <content_attribute id="drugs-alcohol">none</content_attribute>
+-        <content_attribute id="drugs-narcotics">none</content_attribute>
+-        <content_attribute id="drugs-tobacco">none</content_attribute>
+-        <content_attribute id="sex-nudity">none</content_attribute>
+-        <content_attribute id="sex-themes">none</content_attribute>
+-        <content_attribute id="sex-homosexuality">none</content_attribute>
+-        <content_attribute id="sex-prostitution">none</content_attribute>
+-        <content_attribute id="sex-adultery">none</content_attribute>
+-        <content_attribute id="sex-appearance">none</content_attribute>
+-        <content_attribute id="language-profanity">none</content_attribute>
+-        <content_attribute id="language-humor">none</content_attribute>
+-        <content_attribute id="language-discrimination">none</content_attribute>
+-        <content_attribute id="social-chat">none</content_attribute>
+-        <content_attribute id="social-info">none</content_attribute>
+-        <content_attribute id="social-audio">none</content_attribute>
+-        <content_attribute id="social-location">none</content_attribute>
+-        <content_attribute id="social-contacts">none</content_attribute>
+-        <content_attribute id="money-purchasing">none</content_attribute>
+-        <content_attribute id="money-gambling">none</content_attribute>
+-    </content_rating>
++    <content_rating type="oars-1.1" />
+ </component>
+--
+libgit2 1.7.2
+
