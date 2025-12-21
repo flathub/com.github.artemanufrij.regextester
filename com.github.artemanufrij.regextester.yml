@@ -16,9 +16,6 @@ finish-args:
   - --socket=wayland
 modules:
   - name: libgee
-    make-install-args:
-      - girdir=/app/share/gir-1.0
-      - typelibdir=/app/lib/girepository-1.0
     sources:
       - type: archive
         url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
@@ -33,11 +30,10 @@ modules:
         url: https://github.com/artemanufrij/regextester/archive/1.1.1.tar.gz
         sha256: 619e9cb465f98119c17864078d3f308ab5eed4ff1af59f4b45254033cd10a05e
       - type: patch
-        path: elementary-theme.patch
-      - type: patch
-        path: svg-icon.patch
-      - type: patch
-        path: fix-appdata.patch
+        paths:
+          - elementary-theme.patch
+          - svg-icon.patch
+          - fix-appdata.patch
     post-install:
       - mkdir -p /app/share/icons/hicolor/scalable/apps
       - mv /app/share/icons/hicolor/128x128@2/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
